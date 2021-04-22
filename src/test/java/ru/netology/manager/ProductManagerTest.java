@@ -71,4 +71,12 @@ class ProductManagerTest {
         Product[] expected = new Product[]{item5, item7};
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void ShouldFindNothing() {
+
+        Product[] actual = manager.searchBy("Russia");
+        Product[] expected = new Product[]{};
+        assertArrayEquals(expected, actual);
+    }
 }
